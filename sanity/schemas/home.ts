@@ -114,21 +114,29 @@ const whatWeFund = defineField({
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
-      name: "card",
-      title: "Card",
-      type: "object",
-      fields: [
-        defineField({
-          name: "card1",
-          title: "Card 1",
+      name: "programs",
+      title: "Programs",
+      type: "array",
+      of: [
+        {
+          name: "program",
+          title: "Program",
           type: "object",
           fields: [
-            defineField({
+            {
+              name: "heading",
+              title: "Heading",
+              type: "text",
+            },
+            {
+              name: "text",
+              title: "Text",
+              type: "text",
+            },
+            {
               name: "image",
               title: "Image",
               type: "image",
-              validation: (Rule: any) => Rule.required(),
-              options: { hotspot: true },
               fields: [
                 defineField({
                   name: "alt",
@@ -137,71 +145,9 @@ const whatWeFund = defineField({
                   validation: (Rule: any) => Rule.required(),
                 }),
               ],
-            }),
-            defineField({
-              name: "paragraph",
-              title: "Paragraph Text",
-              type: "text",
-              validation: (Rule: any) => Rule.required(),
-            }),
+            },
           ],
-        }),
-        defineField({
-          name: "card2",
-          title: "Card 2",
-          type: "object",
-          fields: [
-            defineField({
-              name: "image",
-              title: "Image",
-              type: "image",
-              validation: (Rule: any) => Rule.required(),
-              options: { hotspot: true },
-              fields: [
-                defineField({
-                  name: "alt",
-                  title: "Alternative Text",
-                  type: "string",
-                  validation: (Rule: any) => Rule.required(),
-                }),
-              ],
-            }),
-            defineField({
-              name: "paragraph",
-              title: "Paragraph Text",
-              type: "text",
-              validation: (Rule: any) => Rule.required(),
-            }),
-          ],
-        }),
-        defineField({
-          name: "card3",
-          title: "Card 3",
-          type: "object",
-          fields: [
-            defineField({
-              name: "image",
-              title: "Image",
-              type: "image",
-              validation: (Rule: any) => Rule.required(),
-              options: { hotspot: true },
-              fields: [
-                defineField({
-                  name: "alt",
-                  title: "Alternative Text",
-                  type: "string",
-                  validation: (Rule: any) => Rule.required(),
-                }),
-              ],
-            }),
-            defineField({
-              name: "paragraph",
-              title: "Paragraph Text",
-              type: "text",
-              validation: (Rule: any) => Rule.required(),
-            }),
-          ],
-        }),
+        },
       ],
     }),
   ],
