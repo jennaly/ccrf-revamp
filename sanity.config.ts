@@ -1,5 +1,6 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
+import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./sanity/schemas";
 import singletonDocs from "./sanity/config/singleton";
 
@@ -37,6 +38,7 @@ const config = defineConfig({
               ])
           ),
     }),
+    visionTool(),
   ],
   schema: {
     types: schemaTypes, // Filter out singleton types from the global "New document" menu options
