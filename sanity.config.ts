@@ -31,6 +31,9 @@ const config = defineConfig({
                 // Regular document types
                 S.divider(),
                 S.documentTypeListItem("stories").title("Stories"),
+                S.documentTypeListItem("faq").title(
+                  "Frequently Asked Questions"
+                ),
               ])
           ),
     }),
