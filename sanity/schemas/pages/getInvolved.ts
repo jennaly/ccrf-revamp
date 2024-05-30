@@ -4,6 +4,7 @@ const pageName = defineField({
   name: "pageName",
   title: "Page Name",
   type: "string",
+  readOnly: true,
 });
 
 const header = defineField({
