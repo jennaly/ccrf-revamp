@@ -9,13 +9,13 @@ const hero = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
       name: "subheading",
       title: "Subheading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
@@ -75,7 +75,7 @@ const mission = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
@@ -99,6 +99,25 @@ const mission = defineField({
         }),
       ],
     }),
+    defineField({
+      name: "cta",
+      title: "CTA",
+      type: "object",
+      fields: [
+        defineField({
+          name: "ctaText",
+          title: "CTA Text",
+          type: "string",
+          validation: (Rule: any) => Rule.required(),
+        }),
+        defineField({
+          name: "ctaUrl",
+          title: "CTA URL",
+          type: "url",
+          validation: (Rule: any) => Rule.required(),
+        }),
+      ],
+    }),
   ],
 });
 
@@ -110,7 +129,7 @@ const whatWeFund = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
@@ -161,7 +180,7 @@ const stories = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
@@ -186,7 +205,7 @@ const video = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "string",
+      type: "text",
       validation: (Rule: any) => Rule.required(),
     }),
     defineField({
