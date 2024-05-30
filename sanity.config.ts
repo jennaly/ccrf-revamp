@@ -35,6 +35,7 @@ const config = defineConfig({
                 S.documentTypeListItem("faq").title(
                   "Frequently Asked Questions"
                 ),
+                S.documentTypeListItem("testimonials").title("Testimonials"),
               ])
           ),
     }),
