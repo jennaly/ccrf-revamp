@@ -14,6 +14,11 @@ const singletonDocs = [
     id: "getInvolvedPage",
     schemaType: "getInvolvedPage",
   },
+  {
+    title: "Partner Page",
+    id: "partnerPage",
+    schemaType: "partnerPage",
+  },
 ];
 
 export default singletonDocs;
