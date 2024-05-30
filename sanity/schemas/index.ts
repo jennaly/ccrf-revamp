@@ -3,6 +3,7 @@ import { aboutPage } from "./pages/about";
 import { getInvolvedPage } from "./pages/getInvolved";
 import { homePage } from "./pages/home";
 import { partnerPage } from "./pages/partner";
+import { waysToDonatePage } from "./pages/waysToDonate";
 import { stories } from "./stories";
 import { testimonials } from "./testimonials";
 
@@ -14,4 +15,5 @@ export const schemaTypes = [
   testimonials,
   getInvolvedPage,
   partnerPage,
+  waysToDonatePage,
 ];
