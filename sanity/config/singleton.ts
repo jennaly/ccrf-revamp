@@ -24,6 +24,11 @@ const singletonDocs = [
     id: "waysToDonatePage",
     schemaType: "waysToDonatePage",
   },
+  {
+    title: "Fundraise Page",
+    id: "fundraisePage",
+    schemaType: "fundraisePage",
+  },
 ];
 
 export default singletonDocs;

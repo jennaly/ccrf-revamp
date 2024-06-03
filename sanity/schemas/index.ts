@@ -1,5 +1,6 @@
 import { faq } from "./faq";
 import { aboutPage } from "./pages/about";
+import { fundraisePage } from "./pages/fundraise";
 import { getInvolvedPage } from "./pages/getInvolved";
 import { homePage } from "./pages/home";
 import { partnerPage } from "./pages/partner";
@@ -16,4 +17,5 @@ export const schemaTypes = [
   getInvolvedPage,
   partnerPage,
   waysToDonatePage,
+  fundraisePage,
 ];
