@@ -165,7 +165,7 @@ const whyUs = defineField({
 });
 
 const nationalReach = defineField({
-  name: "nationalReach",
+  name: "nationalReachSection",
   title: "National Reach Section",
   type: "object",
   fields: [
@@ -199,8 +199,8 @@ const nationalReach = defineField({
   ],
 });
 
-const annualReportsSection = defineField({
-  name: "annualReports",
+const annualReports = defineField({
+  name: "annualReportsSection",
   title: "Annual Reports",
   type: "object",
   fields: [
@@ -265,7 +265,7 @@ export const aboutPage = defineType({
     impact,
     whyUs,
     nationalReach,
-    annualReportsSection,
+    annualReports,
   ],
   preview: {
     select: {

@@ -2,7 +2,7 @@ import { defineField, defineType } from "sanity";
 import { getExtension, getImageDimensions } from "@sanity/asset-utils";
 
 const hero = defineField({
-  name: "hero",
+  name: "heroSection",
   title: "Hero Section",
   type: "object",
   fields: [
@@ -68,7 +68,7 @@ const pageName = defineField({
 });
 
 const mission = defineField({
-  name: "mission",
+  name: "missionSection",
   title: "Mission Section",
   type: "object",
   fields: [
@@ -122,7 +122,7 @@ const mission = defineField({
 });
 
 const whatWeFund = defineField({
-  name: "whatWeFund",
+  name: "whatWeFundSection",
   title: "'What We Fund' Section",
   type: "object",
   fields: [
@@ -173,7 +173,7 @@ const whatWeFund = defineField({
 });
 
 const stories = defineField({
-  name: "stories",
+  name: "storiesSection",
   title: "Stories Section",
   type: "object",
   fields: [
@@ -198,7 +198,7 @@ const stories = defineField({
 });
 
 const video = defineField({
-  name: "video",
+  name: "videoSection",
   title: "Video Section",
   type: "object",
   fields: [
