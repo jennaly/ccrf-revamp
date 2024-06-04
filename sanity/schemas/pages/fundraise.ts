@@ -27,7 +27,7 @@ const header = defineField({
 });
 
 const fundraisedAmount = defineField({
-  name: "fundraisedAmount",
+  name: "fundraisedAmountSection",
   title: "Fundraised Amount",
   type: "object",
   fields: [
@@ -65,7 +65,7 @@ const fundraisedAmount = defineField({
 });
 
 const fundraiseOptions = defineField({
-  name: "fundraiseOptions",
+  name: "fundraiseOptionsSection",
   title: "Fundraise Options",
   type: "array",
   of: [
