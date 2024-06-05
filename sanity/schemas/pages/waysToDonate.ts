@@ -131,7 +131,7 @@ const waysToDonateSection = defineField({
       ],
     }),
     defineField({
-      name: "mailcheck",
+      name: "mailCheck",
       title: "Mail a Check",
       type: "object",
       fields: [
