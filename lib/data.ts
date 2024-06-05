@@ -25,7 +25,7 @@ export async function getStories() {
   return client.fetch(groq`*[_type == "stories"] {
     _id,
     title,
-    slug,
+    "slug": slug.current,
     featuredImage {
       alt,
       "imageURL": asset -> url,
@@ -125,7 +125,8 @@ export async function getAboutUsPage() {
           "imageURL": asset -> url
         }
       }
-    }`);
+    }
+  }`);
 }
 
 export async function getInvolved() {
