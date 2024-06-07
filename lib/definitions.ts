@@ -102,6 +102,7 @@ export type AboutUsPage = {
     heading: string;
     text: string;
     stats: {
+      _id: string;
       statValue: string;
       statUnit: string;
       statText: string;
@@ -198,6 +199,48 @@ export type PartnerPage = {
     heading: string;
     logos: {
       image: Image;
+    }[];
+  };
+};
+
+export type waysToDonatePage = {
+  header: Header;
+
+  waysToDonateSection: {
+    giftOnline: {
+      heading: string;
+      text: string;
+      image: Image;
+      cta: CTA;
+    };
+    giftOverPhone: {
+      heading: string;
+      text: string;
+      image: Image;
+      cta: CTA;
+    };
+    mailCheck: {
+      heading: string;
+      text: string;
+      image: Image;
+      cta: CTA;
+    };
+    donateStock: {
+      heading: string;
+      text: string;
+      image: Image;
+      cta: CTA;
+    };
+  };
+
+  impactSection: {
+    heading: string;
+    text: string;
+    stats: {
+      _id: string;
+      statValue: string;
+      statUnit: string;
+      statText: string;
     }[];
   };
 };
