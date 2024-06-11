@@ -17,6 +17,12 @@ const config: Config = {
         "ccrf-green": "#93A34B",
         "hero-overlay": "#201916",
       },
+      spacing: {
+        "128": "32rem",
+        "144": "36rem",
+        "256": "64rem",
+        "192": "48rem",
+      },
     },
   },
   plugins: [],
