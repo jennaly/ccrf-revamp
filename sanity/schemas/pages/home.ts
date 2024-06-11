@@ -9,8 +9,20 @@ const hero = defineField({
     defineField({
       name: "heading",
       title: "Heading",
-      type: "text",
+      type: "object",
       validation: (Rule: any) => Rule.required(),
+      fields: [
+        defineField({
+          name: "line1",
+          title: "Line 1",
+          type: "string",
+        }),
+        defineField({
+          name: "line2",
+          title: "Line 2",
+          type: "string",
+        }),
+      ],
     }),
     defineField({
       name: "subheading",

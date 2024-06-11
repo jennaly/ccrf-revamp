@@ -51,7 +51,10 @@ export type HomePage = {
       desktopImg: Image;
       mobileImg: Image;
     };
-    heading: string;
+    heading: {
+      line1: string;
+      line2: string;
+    };
     subheading: string;
   };
 
