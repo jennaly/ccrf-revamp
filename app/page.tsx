@@ -22,7 +22,7 @@ export default async function Home() {
         // style={{
         //   backgroundImage: `url(${heroSection.backgroundImg.desktopImg.imageURL})`,
         // }}
-        className={`relative flex min-h-screen flex-col items-start justify-start py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center border-2 border-red-400`}
+        className={`relative flex min-h-screen flex-col items-start justify-start py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center border-2 border-red-400`}
       >
         <div
           id="hero-backgroundOverlay"
@@ -30,10 +30,10 @@ export default async function Home() {
         />
         <div
           id="hero-textOverlay"
-          className="absolute z-20 left-10 right-10 bottom-16 lg:bottom-20 flex flex-col gap-4 border-2 border-red-700 max-w-[1440px] md:w-[450px] lg:w-[680px] text-white"
+          className="absolute z-20 left-10 right-10 bottom-10 md:bottom-16 lg:bottom-20 flex flex-col gap-4 border-2 border-red-700 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-144 xl:mr-144 text-white"
         >
           <h1
-            className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl`}
+            className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
           >
             Empowering Hope. <br></br> Changing Lives.
           </h1>
