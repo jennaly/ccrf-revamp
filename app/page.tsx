@@ -127,7 +127,7 @@ export default async function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
-              className="w-full aspect-video"
+              className="w-full aspect-video rounded-2xl"
             />
           </div>
         </div>
