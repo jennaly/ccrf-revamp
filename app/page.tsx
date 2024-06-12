@@ -106,6 +106,32 @@ export default async function Home() {
           <WWFCard />
         </div>
       </section>
+
+      <section
+        id="video"
+        className="bg-[url('/video-background-desktop.jpg')] bg-cover mt-[80px] lg:mt-[160px]"
+      >
+        <div className="relative px-[32px] py-[80px] lg:p-[160px] max-w-[1440px] mx-auto">
+          <h2
+            className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
+          >
+            Join us in the fight against childhood cancer and unlock great ideas
+            now.
+          </h2>
+
+          <div className=" left-0 w-full pt-[40px] lg:pt-[60px] xl:pt-[80px] max-w-[1440px] mx-auto">
+            <iframe
+              src="https://www.youtube.com/embed/dsqgkR0cz_A?si=dtoQqTVu3OxGIYnH"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="w-full aspect-video"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
