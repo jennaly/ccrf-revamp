@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         "ccrf-green": "#93A34B",
+        "accent-gray": "#cbcbc9",
         "hero-overlay": "#201916",
       },
       spacing: {
