@@ -4,7 +4,7 @@ import React from "react";
 
 const WWFCard = () => {
   return (
-    <div className="w-full md:w-[48%] xl:w-[32%] flex flex-col py-[24px] border-t xl:border-b">
+    <div className="w-full md:w-[48%] xl:w-[32%] flex flex-col py-[24px] border-t xl:border-b border-accent-gray">
       <h3 className={`${figtree.className} text-lg md:text-xl xl:text-2xl`}>
         Innovative and promising research
       </h3>
