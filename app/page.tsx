@@ -24,7 +24,7 @@ export default async function Home() {
         // style={{
         //   backgroundImage: `url(${heroSection.backgroundImg.desktopImg.imageURL})`,
         // }}
-        className={`relative flex min-h-screen flex-col items-start justify-start py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center`}
+        className={`mt-[40px] relative flex h-screen 2xl:min-h-screen flex-col items-start justify-start xl:py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center`}
       >
         <div
           id="hero-backgroundOverlay"
@@ -32,7 +32,7 @@ export default async function Home() {
         />
         <div
           id="hero-textOverlay"
-          className="absolute z-20 left-[32px] md:left-10 right-[32px] md:right-10 bottom-10 md:bottom-16 lg:bottom-20 flex flex-col gap-4 xl:gap-8 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-144 xl:mr-96 text-white"
+          className="absolute z-20 left-[32px] md:left-10 right-[32px] md:right-10 bottom-10 md:bottom-16 lg:bottom-20 flex flex-col gap-4 xl:gap-8 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-128 2xl:mt-144 xl:mr-96 text-white"
         >
           <h1
             className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
@@ -50,7 +50,7 @@ export default async function Home() {
 
       <section
         id="mission"
-        className="px-[32px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-stretch gap-8 lg:justify-between"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-stretch gap-8 lg:justify-between"
       >
         <div
           id="mission-text"
@@ -86,7 +86,7 @@ export default async function Home() {
 
       <section
         id="whatWeFund"
-        className="px-[32px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col"
       >
         <div id="whatWeFund-header" className="mb-[40px] lg:mb-[80px]">
           <h2
@@ -111,15 +111,15 @@ export default async function Home() {
         id="video"
         className="bg-[url('/video-background-desktop.jpg')] bg-cover mt-[80px] lg:mt-[160px]"
       >
-        <div className="relative px-[32px] py-[80px] lg:p-[160px] max-w-[1440px] mx-auto">
+        <div className="relative px-[32px] py-[80px] lg:[py-100px] 2xl:py-[160px] max-w-[1440px] mx-auto">
           <h2
-            className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
+            className={`${crimson.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-full lg:w-[55%] 2xl:w-full mx-auto`}
           >
             Join us in the fight against childhood cancer and unlock great ideas
             now.
           </h2>
 
-          <div className=" left-0 w-full pt-[40px] lg:pt-[60px] xl:pt-[80px] max-w-[1440px] mx-auto">
+          <div className=" left-0 pt-[40px] lg:pt-[60px] 2xl:pt-[80px] max-w-[1440px] mx-auto">
             <iframe
               src="https://www.youtube.com/embed/dsqgkR0cz_A?si=dtoQqTVu3OxGIYnH"
               title="YouTube video player"
@@ -127,7 +127,7 @@ export default async function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
-              className="w-full aspect-video rounded-2xl"
+              className="w-full lg:w-[55%] 2xl:w-full mx-auto aspect-video rounded-2xl"
             />
           </div>
         </div>
