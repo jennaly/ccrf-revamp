@@ -5,6 +5,7 @@ import Image from "next/image";
 import DonateCTA from "./components/DonateCTA";
 import CTA from "./components/CTA";
 import WWFCard from "./components/WWFCard";
+import StoriesCarousel from "./components/StoriesCarousel";
 
 export default async function Home() {
   const data: HomePage[] = await getHomePage();
@@ -32,7 +33,7 @@ export default async function Home() {
         />
         <div
           id="hero-textOverlay"
-          className="absolute z-20 left-[32px] md:left-10 right-[32px] md:right-10 bottom-10 md:bottom-16 lg:bottom-20 flex flex-col gap-4 xl:gap-8 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-128 2xl:mt-144 xl:mr-96 text-white"
+          className="absolute z-20 left-[32px] md:left-10 right-[32px] md:right-10 bottom-20 md:bottom-32 lg:bottom-44 xl:bottom-24 flex flex-col gap-4 xl:gap-8 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-144 2xl:mt-144 xl:mr-96 text-white"
         >
           <h1
             className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
@@ -108,12 +109,19 @@ export default async function Home() {
       </section>
 
       <section
+        id="stories"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto "
+      >
+        <StoriesCarousel />
+      </section>
+
+      <section
         id="video"
         className="bg-[url('/video-background-desktop.jpg')] bg-cover mt-[80px] lg:mt-[160px]"
       >
         <div className="relative px-[32px] py-[80px] lg:[py-100px] 2xl:py-[160px] max-w-[1440px] mx-auto">
           <h2
-            className={`${crimson.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl w-full lg:w-[55%] 2xl:w-full mx-auto`}
+            className={`${crimson.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl w-full lg:w-[55%] 2xl:w-[80%] mx-auto`}
           >
             Join us in the fight against childhood cancer and unlock great ideas
             now.
@@ -127,7 +135,7 @@ export default async function Home() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
-              className="w-full lg:w-[55%] 2xl:w-full mx-auto aspect-video rounded-2xl"
+              className="w-full lg:w-[55%] 2xl:w-[80%] mx-auto aspect-video rounded-2xl"
             />
           </div>
         </div>
