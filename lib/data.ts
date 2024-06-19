@@ -61,6 +61,7 @@ export async function getHomePage() {
     whatWeFundSection {
       ...,
       programs[] {
+        _key,
         heading,
         emText,
         text,
