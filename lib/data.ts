@@ -36,7 +36,8 @@ export async function getStories() {
 }
 
 export async function getHomePage() {
-  return client.fetch(groq`*[_type == "homePage"] {
+  return client.fetch(
+    groq`*[_type == "homePage"] {
     heroSection {
       ...,
       backgroundImg {
@@ -61,6 +62,7 @@ export async function getHomePage() {
       ...,
       programs[] {
         heading,
+        emText,
         text,
         image {
           alt,
@@ -81,7 +83,8 @@ export async function getHomePage() {
       }
     },
     videoSection
-  }`);
+  }`
+  );
 }
 
 export async function getAboutUsPage() {
