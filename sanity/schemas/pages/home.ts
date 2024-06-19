@@ -160,6 +160,11 @@ const whatWeFund = defineField({
               type: "text",
             },
             {
+              name: "emText",
+              title: "Emphasized Text",
+              type: "string",
+            },
+            {
               name: "text",
               title: "Text",
               type: "text",
