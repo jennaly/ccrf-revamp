@@ -23,6 +23,13 @@ export type Header = {
   heading: string;
 };
 
+export type Program = {
+  heading: string;
+  emText: string;
+  text: string;
+  image: Image;
+};
+
 export type FAQ = {
   _id: string;
   question: string;
@@ -67,11 +74,7 @@ export type HomePage = {
 
   whatWeFundSection: {
     heading: string;
-    programs: {
-      heading: string;
-      text: string;
-      image: Image;
-    }[];
+    programs: Program[];
   };
 
   storiesSection: {
