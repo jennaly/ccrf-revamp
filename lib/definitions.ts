@@ -24,6 +24,7 @@ export type Header = {
 };
 
 export type Program = {
+  _key: string;
   heading: string;
   emText: string;
   text: string;
