@@ -1,113 +1,145 @@
+import { getHomePage } from "@/lib/data";
+import { HomePage } from "@/lib/definitions";
+import { crimson, figtree } from "@/lib/fonts";
 import Image from "next/image";
+import DonateCTA from "./components/DonateCTA";
+import CTA from "./components/CTA";
+import WWFCard from "./components/WWFCard";
+import StoriesCarousel from "./components/StoriesCarousel";
 
-export default function Home() {
+export default async function Home() {
+  const data: HomePage[] = await getHomePage();
+
+  const {
+    heroSection,
+    missionSection,
+    whatWeFundSection,
+    storiesSection,
+    videoSection,
+  } = data[0];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <main>
+      <section
+        id="hero"
+        // style={{
+        //   backgroundImage: `url(${heroSection.backgroundImg.desktopImg.imageURL})`,
+        // }}
+        className={`mt-[40px] relative flex h-screen 2xl:min-h-screen flex-col items-start justify-start xl:py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center`}
+      >
+        <div
+          id="hero-backgroundOverlay"
+          className="bg-hero-overlay/50 w-full h-full absolute top-0 z-10"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div
+          id="hero-textOverlay"
+          className="absolute z-20 left-[32px] md:left-10 right-[32px] md:right-10 bottom-20 md:bottom-32 lg:bottom-44 xl:bottom-24 flex flex-col gap-4 xl:gap-8 max-w-[1440px] md:w-[450px] lg:w-[680px] xl:relative xl:mt-144 2xl:mt-144 xl:mr-96 text-white"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+          <h1
+            className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
+          >
+            Empowering Hope. <br></br> Changing Lives.
+          </h1>
+          <p className={`${figtree.className} text-lg lg:text-xl`}>
+            ClimateCo. is a technology consultancy specialising in supporting
+            sustainable start-ups to make a positive impact on the planet.
           </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <DonateCTA />
+        </div>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      <section
+        id="mission"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-stretch gap-8 lg:justify-between"
+      >
+        <div
+          id="mission-text"
+          className="w-full lg:w-2/5 flex flex-col gap-4 lg:justify-around lg:gap-0"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          <h2
+            className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
+          >
+            We are on a mission to end childhood cancer.
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
+          <p
+            className={`${figtree.className} text-lg lg:text-xl md:my-4 xl:my-0`}
+          >
+            Children’s Cancer Research Fund is a national nonprofit dedicated to
+            ending childhood cancer. Our main focus is to support the research
+            of bright scientists across the country whose ideas can make the
+            greatest impact for children fighting cancer.
           </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+          <CTA />
+        </div>
+
+        <div id="mission-image" className="w-full lg:w-1/2">
+          <Image
+            src="/mission-image.webp"
+            width="500"
+            height="500"
+            alt="mission image"
+            className="w-full h-full object-cover rounded-xl"
+          />
+        </div>
+      </section>
+
+      <section
+        id="whatWeFund"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto flex flex-col"
+      >
+        <div id="whatWeFund-header" className="mb-[40px] lg:mb-[80px]">
+          <h2
+            className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
+          >
+            We design, build and run collaborative spaces where climate-science,
+            technology and people can thrive
           </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        </div>
+
+        <div
+          id="whatWeFund-programs"
+          className="flex flex-col md:flex-row md:flex-wrap md:justify-between"
+        >
+          <WWFCard />
+          <WWFCard />
+          <WWFCard />
+        </div>
+      </section>
+
+      <section
+        id="stories"
+        className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto "
+      >
+        <StoriesCarousel />
+      </section>
+
+      <section
+        id="video"
+        className="bg-[url('/video-background-desktop.jpg')] bg-cover mt-[80px] lg:mt-[160px]"
+      >
+        <div className="relative px-[32px] py-[80px] lg:[py-100px] 2xl:py-[160px] max-w-[1440px] mx-auto">
+          <h2
+            className={`${crimson.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl w-full lg:w-[55%] 2xl:w-[80%] mx-auto`}
+          >
+            Join us in the fight against childhood cancer and unlock great ideas
+            now.
+          </h2>
+
+          <div className=" left-0 pt-[40px] lg:pt-[60px] 2xl:pt-[80px] max-w-[1440px] mx-auto">
+            <iframe
+              src="https://www.youtube.com/embed/dsqgkR0cz_A?si=dtoQqTVu3OxGIYnH"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              className="w-full lg:w-[55%] 2xl:w-[80%] mx-auto aspect-video rounded-2xl"
+            />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
