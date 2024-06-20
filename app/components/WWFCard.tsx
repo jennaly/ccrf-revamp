@@ -1,17 +1,22 @@
-import { figtree } from "@/lib/fonts";
+import { HomePage, Program } from "@/lib/definitions";
+import { crimson, figtree } from "@/lib/fonts";
 import Image from "next/image";
 import React from "react";
 
-const WWFCard = () => {
+type WWFProgramProps = {
+  data: Program;
+};
+
+const WWFCard = ({
+  data: { heading, text, emText, image },
+}: WWFProgramProps) => {
   return (
     <div className="w-full md:w-[48%] xl:w-[32%] flex flex-col py-[24px] border-t xl:border-b border-accent-gray">
-      <h3 className={`${figtree.className} text-lg md:text-xl xl:text-2xl`}>
-        Innovative and promising research
-      </h3>
+      <h3 className={`${crimson.className} text-2xl`}>{heading}</h3>
       <div className="w-full pt-[24px]">
         <Image
-          src="/whatWeFund-program1.webp"
-          alt="program 1"
+          src={image.imageURL}
+          alt={image.alt}
           width="300"
           height="500"
           className="w-full h-128 object-cover object-center rounded-xl"
@@ -21,13 +26,7 @@ const WWFCard = () => {
       <div
         className={`${figtree.className} text-md md:text-lg xl:text-xl pt-[24px]`}
       >
-        <span className="font-semibold">
-          We fund research at institutions nationwide.
-        </span>{" "}
-        <p>
-          Bridge funding gaps for research projects by helping researchers prove
-          their ideas and secure larger grants.
-        </p>
+        <span className="font-semibold">{emText}</span> <p>{text}</p>
       </div>
     </div>
   );

@@ -38,11 +38,12 @@ export default async function Home() {
           <h1
             className={`${crimson.className} text-4xl md:text-5xl lg:text-6xl xl:text-7xl`}
           >
-            Empowering Hope. <br></br> Changing Lives.
+            {heroSection.heading.line1}
+            <br></br>
+            {heroSection.heading.line2}
           </h1>
           <p className={`${figtree.className} text-lg lg:text-xl`}>
-            ClimateCo. is a technology consultancy specialising in supporting
-            sustainable start-ups to make a positive impact on the planet.
+            {heroSection.subheading}
           </p>
 
           <DonateCTA />
@@ -60,15 +61,12 @@ export default async function Home() {
           <h2
             className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
           >
-            We are on a mission to end childhood cancer.
+            {missionSection.heading}
           </h2>
           <p
             className={`${figtree.className} text-lg lg:text-xl md:my-4 xl:my-0`}
           >
-            Children’s Cancer Research Fund is a national nonprofit dedicated to
-            ending childhood cancer. Our main focus is to support the research
-            of bright scientists across the country whose ideas can make the
-            greatest impact for children fighting cancer.
+            {missionSection.paragraph}
           </p>
 
           <CTA />
@@ -76,10 +74,10 @@ export default async function Home() {
 
         <div id="mission-image" className="w-full lg:w-1/2">
           <Image
-            src="/mission-image.webp"
+            src={missionSection.image.imageURL}
             width="500"
             height="500"
-            alt="mission image"
+            alt={missionSection.image.alt}
             className="w-full h-full object-cover rounded-xl"
           />
         </div>
@@ -93,8 +91,7 @@ export default async function Home() {
           <h2
             className={`${crimson.className} text-3xl md:text-4xl lg:text-5xl xl:text-6xl`}
           >
-            We design, build and run collaborative spaces where climate-science,
-            technology and people can thrive
+            {whatWeFundSection.heading}
           </h2>
         </div>
 
@@ -102,9 +99,9 @@ export default async function Home() {
           id="whatWeFund-programs"
           className="flex flex-col md:flex-row md:flex-wrap md:justify-between"
         >
-          <WWFCard />
-          <WWFCard />
-          <WWFCard />
+          {whatWeFundSection.programs.map((program) => (
+            <WWFCard key={program._key} data={program} />
+          ))}
         </div>
       </section>
 
@@ -112,7 +109,7 @@ export default async function Home() {
         id="stories"
         className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto "
       >
-        <StoriesCarousel />
+        <StoriesCarousel data={storiesSection} />
       </section>
 
       <section
@@ -123,18 +120,16 @@ export default async function Home() {
           <h2
             className={`${crimson.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl w-full lg:w-[55%] 2xl:w-[80%] mx-auto`}
           >
-            Join us in the fight against childhood cancer and unlock great ideas
-            now.
+            {videoSection.heading}
           </h2>
 
           <div className=" left-0 pt-[40px] lg:pt-[60px] 2xl:pt-[80px] max-w-[1440px] mx-auto">
             <iframe
-              src="https://www.youtube.com/embed/dsqgkR0cz_A?si=dtoQqTVu3OxGIYnH"
-              title="YouTube video player"
-              frameborder="0"
+              src={videoSection.videoURL}
+              title={videoSection.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
               className="w-full lg:w-[55%] 2xl:w-[80%] mx-auto aspect-video rounded-2xl"
             />
           </div>
