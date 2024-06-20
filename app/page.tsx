@@ -109,7 +109,7 @@ export default async function Home() {
         id="stories"
         className="px-[32px] xl:px-[64px] pt-[80px] lg:pt-[160px] max-w-[1440px] mx-auto "
       >
-        <StoriesCarousel data={storiesSection} />
+        <StoriesCarousel {...storiesSection} />
       </section>
 
       <section
