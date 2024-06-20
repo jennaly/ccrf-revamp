@@ -48,6 +48,7 @@ export type Story = {
   _id: string;
   title: string;
   slug: string;
+  ambassador: string;
   featuredImage: Image;
   summary: string;
   content: PortableTextBlock[];
@@ -81,6 +82,7 @@ export type HomePage = {
   storiesSection: {
     heading: string;
     featuredStories: {
+      _id: string;
       title: string;
       slug: string;
       summary: string;

@@ -76,6 +76,7 @@ export async function getHomePage() {
       "featuredStories": featuredStories[] -> {
         title,
         "slug": slug.current,
+        ambassador,
         featuredImage {
         alt,
           "imageURL": asset -> url

@@ -17,6 +17,12 @@ const slug = defineField({
   },
 });
 
+const ambassador = defineField({
+  name: "ambassador",
+  title: "Ambassador's Name",
+  type: "string",
+});
+
 const featuredImage = defineField({
   name: "featuredImage",
   title: "Featured Image",
@@ -79,7 +85,7 @@ export const stories = defineType({
   name: "stories",
   title: "Stories",
   type: "document",
-  fields: [title, slug, featuredImage, summary, content],
+  fields: [title, slug, ambassador, featuredImage, summary, content],
   preview: {
     select: {
       title: "title",
