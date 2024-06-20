@@ -22,10 +22,10 @@ export default async function Home() {
     <main>
       <section
         id="hero"
-        // style={{
-        //   backgroundImage: `url(${heroSection.backgroundImg.desktopImg.imageURL})`,
-        // }}
-        className={`mt-[40px] relative flex h-screen 2xl:min-h-screen flex-col items-start justify-start xl:py-24 bg-[url('/hero-desktop.webp')] bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center`}
+        style={{
+          backgroundImage: `url(${heroSection.backgroundImg.desktopImg.imageURL})`,
+        }}
+        className={`mt-[40px] relative flex h-screen 2xl:min-h-screen flex-col items-start justify-start xl:py-24 bg-cover bg-[60%] md:bg-center xl:items-center xl:justify-center`}
       >
         <div
           id="hero-backgroundOverlay"
