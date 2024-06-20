@@ -85,6 +85,7 @@ export type HomePage = {
       _id: string;
       title: string;
       slug: string;
+      ambassador: string;
       summary: string;
       featuredImage: Image;
     }[];
